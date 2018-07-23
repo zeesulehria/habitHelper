@@ -68,7 +68,7 @@ export class HomeComponent implements OnInit {
 
     pattern2(args) {
         setTimeout(() => {
-            this.vibrator.vibrate([800, 200, 800, 200, 800, 200, 800, 200, 800]);
+            this.vibrator.vibrate([1000, 200, 1000, 200, 1000, 200, 1000, 200, 1000]);
         }, 5000);
 
         LocalNotifications.schedule([{
