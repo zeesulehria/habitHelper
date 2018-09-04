@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1060627504007",
+    "firebase_url": "https://habithelper-83d13.firebaseio.com",
+    "project_id": "habithelper-83d13",
+    "storage_bucket": "habithelper-83d13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060627504007:android:40a291db84a7de48",
+        "android_client_info": {
+          "package_name": "org.nativescript.habitHelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060627504007-htkegkd1peo1sc724pvktluoljeko8t5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqyTn-SAa39J6TT7NsqDvaY29MUfmvRKU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

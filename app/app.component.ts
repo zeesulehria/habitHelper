@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { isAndroid } from "platform";
-import { SelectedIndexChangedEventData, TabView, TabViewItem } from "tns-core-modules/ui/tab-view";
+
+const firebase = require("nativescript-plugin-firebase");
 
 @Component({
     selector: "ns-app",
@@ -14,9 +15,19 @@ export class AppComponent implements OnInit {
         // Use the component constructor to inject providers.
     }
 
-    ngOnInit(): void {
-        // Init your component properties here.
-    }
+    ngOnInit() {
+        firebase.init({
+          // Optionally pass in properties for database, authentication and cloud messaging,
+          // see their respective docs.
+        }).then(
+          () => {
+                console.log("#######################################firebase.init lkdjfdslfs lfjsl  done");
+            },
+          (error) => {
+            console.log(`############################################firebase.init error: ${error}`);
+          }
+        );
+      }
 
     getIconSource(icon: string): string {
         const iconPrefix = isAndroid ? "res://" : "res://tabIcons/";

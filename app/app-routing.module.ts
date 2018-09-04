@@ -2,21 +2,20 @@ import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 
-import { BrowseComponent } from "./browse/browse.component";
+import { LoginComponent } from "~/login/login.component";
+import { SignupComponent } from "~/signup/signup.component";
 import { HomeComponent } from "./home/home.component";
-import { ItemDetailComponent } from "./item-detail/item-detail.component";
-import { SearchComponent } from "./search/search.component";
 
-export const COMPONENTS = [BrowseComponent, HomeComponent, ItemDetailComponent, SearchComponent];
+export const COMPONENTS = [HomeComponent];
 
 const routes: Routes = [
-    { path: "", redirectTo: "/(homeTab:home//browseTab:browse//searchTab:search)", pathMatch: "full" },
+    { path: "", redirectTo: "/login", pathMatch: "full" },
 
-    { path: "home", component: HomeComponent, outlet: "homeTab" },
-    { path: "browse", component: BrowseComponent, outlet: "browseTab" },
-    { path: "search", component: SearchComponent, outlet: "searchTab" },
+    { path: "login", component: LoginComponent },
+    { path: "signup", component: SignupComponent },
+    { path: "home", component: HomeComponent }
 
-    { path: "item/:id", component: ItemDetailComponent, outlet: "homeTab" }
+    // { path: "item/:id", component: ItemDetailComponent, outlet: "homeTab" }
 ];
 
 @NgModule({
