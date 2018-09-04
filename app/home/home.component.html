@@ -1,23 +1,24 @@
 <ActionBar class="action-bar">
     <Label class="action-bar-title" text="Home"></Label>
+    <ActionItem (tap)="logout()">
+        <Button class="" text="Logout" class="action-item"></Button>
+    </ActionItem>
 </ActionBar>
 
 <StackLayout class="page page-content" verticalAlignment="middle">
-    <!-- <ListView [items]="items" class="list-group">
+
+    <ListView [items]="items" class="list-group">
         <ng-template let-item="item">
             <Label [nsRouterLink]="['../item', item.id]" [text]="item.name" class="list-group-item"></Label>
         </ng-template>
-    </ListView> -->
+    </ListView>
 
     <StackLayout height="25%">
         <Button class="btn btn-primary" text="Vibration Pattern 1" (tap)="pattern1($event)" style="margin-bottom: 20%;"></Button>
-        
     </StackLayout>
 
     <StackLayout height="25%">
         <Button class="btn btn-primary" style="background-color: burlywood" text="Vibration Pattern 2" (tap)="pattern2($event)"></Button>
-        
     </StackLayout>
-
 
 </StackLayout>

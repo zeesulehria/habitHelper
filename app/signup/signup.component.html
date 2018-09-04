@@ -1,0 +1,18 @@
+<!-- Signup screen -->
+<GridLayout class="align-page">
+  <StackLayout width="80%" verticalAlignment="middle">
+    <Label text="Habit Helper" class="signupText align-center text-primary" textWrap="true"></Label>
+
+    <TextField hint="username" class="input input-rounded m-t-10" [(ngModel)]="registerUser.email"></TextField>
+    <TextField hint="password"  secure="true" class="input input-rounded m-t-10 m-b-10" [(ngModel)]="registerUser.password"></TextField>
+    <Button text="Sign up" (tap)="register()" class="btn btn-primary btn-rounded-lg m-t-15"></Button>
+
+    <Label verticalAlignment='bottom' class="align-center m-t-10" [nsRouterLink]="['/login']" pageTransition="flip">
+      <FormattedString>
+        <Span text='Already have an account?' class=''></Span>
+        <Span text='Sign UP' class='bold text-primary'></Span>
+      </FormattedString>
+    </Label>
+
+  </StackLayout>
+</GridLayout>

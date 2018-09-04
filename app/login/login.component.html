@@ -1,0 +1,16 @@
+<!-- login screen -->
+<GridLayout class="align-page">
+  <StackLayout width="80%" verticalAlignment="middle" class="form">
+    <Label text="Habit Helper" class="login align-center text-primary" textWrap="true"></Label>
+
+    <TextField hint="username" class="input input-rounded m-t-10" [(ngModel)]="user.email"></TextField>
+    <TextField hint="password"  secure="true" class="input input-rounded m-t-10 m-b-10" [(ngModel)]="user.password"></TextField>
+    <Button text="Login" (tap)="login()" class="btn btn-primary btn-rounded-lg m-t-15"></Button>
+    <Label verticalAlignment='bottom' class="align-center m-t-10" [nsRouterLink]="['/signup']" pageTransition="flip">
+      <FormattedString>
+        <Span text='Already have an account?' class=''></Span>
+        <Span text='Sign UP' class='bold text-primary'></Span>
+      </FormattedString>
+    </Label>
+  </StackLayout>
+</GridLayout>
